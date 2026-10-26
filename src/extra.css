@@ -1,0 +1,59 @@
+/* ---------- Base (remplace le gabarit des artefacts) ---------- */
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+/* ---------- Connexion ---------- */
+.login{position:fixed;top:0;left:0;right:0;bottom:0;z-index:50;background:var(--blue-deep);display:flex;align-items:center;justify-content:center;padding:16px}
+.login-box{background:var(--surface);color:var(--ink);border-radius:20px;padding:24px;width:100%;max-width:380px;display:flex;flex-direction:column}
+.login-box > *{margin:0 0 12px}
+.login-box .display{font-size:32px;margin-bottom:18px}
+.login-box label{font-weight:700;margin-bottom:6px}
+.login-box input{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:18px;background:var(--surface)}
+.login-err{color:var(--tomato);font-weight:700}
+.btn.big{padding:14px 18px;font-size:17px;border-radius:14px}
+
+/* ---------- DonnÃ©es ---------- */
+.data-row{display:flex;flex-wrap:wrap;margin:8px 0}
+.data-row > *{margin:0 8px 8px 0;text-decoration:none;display:inline-block;cursor:pointer}
+
+/* ---------- Mode tablette ---------- */
+.kiosk-mode body{background:var(--bg)}
+.kiosk{padding:20px 24px 28px;max-width:1200px;margin:0 auto}
+.k-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:18px}
+.k-date{font-size:40px;margin:4px 0 0}
+.k-clock{font-family:"Bricolage Grotesque","Avenir Next",system-ui,sans-serif;font-weight:800;font-size:56px;line-height:1;color:var(--blue);font-variant-numeric:tabular-nums}
+.k-meals{display:flex;flex-wrap:wrap;margin:0 -8px}
+.k-meals .bigmeal{flex:1 1 360px;margin:0 8px 16px;padding:22px}
+.k-meals .bm-name{font-size:32px}
+.k-meals .bm-meta{font-size:17px}
+.k-meals .bm-actions .btn{font-size:18px;padding:12px 18px;margin:0 8px 8px 0}
+.k-meals .mlabel{font-size:14px;padding:3px 12px}
+.k-bottom{display:flex;flex-wrap:wrap;margin:0 -8px}
+.k-card{flex:1 1 320px;margin:0 8px 16px}
+.k-card ul,.k-card .tc-row{font-size:17px}
+.kwrap{padding-top:16px;padding-bottom:40px}
+.kiosk-mode .recipe .rh{font-size:36px}
+.kiosk-mode .ing li,.kiosk-mode .step{font-size:17px}
+
+/* ---------- Vieux Safari : repli sans grid ni gap ---------- */
+@supports not (display:grid){
+  .day{display:flex;flex-wrap:wrap}
+  .day .dhead{width:92px;margin-right:12px}
+  .day .meals{flex:1}
+  .meal{display:flex;align-items:flex-start}
+  .meal .mlabel{width:48px;margin-right:10px;flex:none}
+  .meal .mcell{flex:1;min-width:0;margin-right:8px}
+  .bigmeals,.frigo,.rlist,.snacks,.stats,.rgrid,.facts{display:flex;flex-wrap:wrap}
+  .bigmeals > *,.frigo > *,.rlist > *{flex:1 1 260px;margin:0 6px 12px}
+  .rgrid > *{flex:1 1 300px;margin-right:20px}
+  .facts > div{flex:1 1 120px;margin:0 6px 6px 0}
+  .stats > *{flex:1;margin-right:8px}
+  .tc-row{display:flex}.tc-row .slot{width:48px;margin-right:8px;flex:none}
+  .ing li{display:flex}.ing .qty{width:92px;flex:none;margin-right:10px}
+  .step{display:flex}.step .sn{margin-right:10px;flex:none}
+  .ck-nav{display:flex}.ck-nav > *{flex:1;margin-right:8px}
+  .tabs .tab,.chips-row .mchip,.bm-actions .btn,.rate .rb,.mmenu .btn,.cu-btns .btn{margin:0 6px 6px 0}
+  .ck-top > *{margin-right:12px}
+}
