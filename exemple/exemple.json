@@ -1,0 +1,1152 @@
+{
+ "format": "carnet-repas/1",
+ "collections": {
+  "recipes": {
+   "puree-cordon-bleu": {
+    "cook": 30,
+    "cuisine": "Française",
+    "devices": {
+     "best": "thermomix",
+     "classicLabel": "Four et plaques",
+     "variants": {
+      "thermomix": {
+       "steps": [
+        "Verse 700 g d'eau et 1 pincée de sel dans le bol. Mets les pommes de terre en quartiers dans le panier et place-le dans le bol.",
+        "Mets les haricots verts dans le Varoma. Pose le Varoma sur le couvercle.",
+        "Programme 25 min / Varoma / vitesse 1. Les pommes de terre doivent s'écraser facilement à la fourchette.",
+        "Pendant ce temps, cuis les cordons bleus à l'airfryer : 12 à 15 min à 200 °C, sans huile, en les retournant à mi-cuisson.",
+        "Vide l'eau du bol. Remets-y les pommes de terre, le lait, le beurre, le sel et la muscade.",
+        "Insère le fouet et mixe 20 sec / vitesse 3. La purée est lisse et brillante. Ne prolonge pas, elle deviendrait élastique."
+       ],
+       "time": 35,
+       "tips": [
+        "Garde un peu d'eau de cuisson pour détendre la purée si elle est trop épaisse."
+       ]
+      }
+     }
+    },
+    "difficulty": "Facile",
+    "ingredients": [
+     {
+      "group": "Cordons bleus",
+      "item": "cordons bleus surgelés",
+      "qty": "2"
+     },
+     {
+      "group": "Purée",
+      "item": "pommes de terre à purée",
+      "qty": "600 g"
+     },
+     {
+      "group": "Purée",
+      "item": "lait demi-écrémé",
+      "qty": "100 ml"
+     },
+     {
+      "group": "Purée",
+      "item": "beurre ou huile d'olive",
+      "qty": "1 c. à soupe"
+     },
+     {
+      "group": "Purée",
+      "item": "muscade",
+      "qty": "1 pincée"
+     },
+     {
+      "group": "Purée",
+      "item": "sel",
+      "qty": "1 pincée"
+     },
+     {
+      "group": "Légumes",
+      "item": "haricots verts (frais ou surgelés)",
+      "qty": "300 g"
+     }
+    ],
+    "moment": "Week-end",
+    "prep": 10,
+    "servings": 2,
+    "steps": [
+     "Épluche les pommes de terre et coupe-les en gros morceaux. Mets-les dans une casserole d'eau froide salée.",
+     "Porte à ébullition sur les plaques, puis baisse à feu moyen. Laisse cuire 20 min, jusqu'à ce qu'une lame de couteau entre sans résistance.",
+     "Pendant ce temps, mets les cordons bleus dans l'airfryer préchauffé, sans huile. Cuis 12 à 15 min à 200 °C. Retourne-les à mi-cuisson.",
+     "Les cordons bleus sont prêts quand la panure est dorée et croustillante, et que le fromage fond au centre. Le cœur doit être bien chaud (74 °C).",
+     "Cuis les haricots verts 8 à 10 min dans de l'eau bouillante salée. Égoutte-les.",
+     "Égoutte les pommes de terre et écrase-les au presse-purée. Ajoute le lait chaud, le beurre ou l'huile d'olive, le sel et la muscade. Mélange jusqu'à obtenir une purée lisse.",
+     "Sers les cordons bleus avec la purée et les haricots verts."
+    ],
+    "tips": [
+     "Réchauffe le lait avant de l'ajouter : la purée reste bien lisse et ne refroidit pas.",
+     "Ne mixe jamais la purée au mixeur plongeant à la main, elle deviendrait collante."
+    ],
+    "title": "Purée maison, cordons bleus et haricots verts"
+   },
+   "pates-bolognaise": {
+    "cook": 35,
+    "cuisine": "Italienne",
+    "devices": {
+     "best": "classique",
+     "classicLabel": "Plaques",
+     "variants": {
+      "thermomix": {
+       "steps": [
+        "Mets l'oignon en quartiers, l'ail, la carotte et la courgette en morceaux dans le bol. Hache 5 sec / vitesse 5. Racle les parois.",
+        "Ajoute l'huile. Cuis 3 min / 120 °C / vitesse 1.",
+        "Ajoute le bœuf haché. Cuis 5 min / 120 °C / sens inverse / vitesse 1. Le bœuf ne doit plus être rose.",
+        "Ajoute les tomates, le concentré, l'origan et le sel. Cuis 20 min / 100 °C / sens inverse / vitesse 1, panier posé sur le couvercle pour éviter les projections.",
+        "Pendant ce temps, cuis les spaghettis complets dans l'eau bouillante salée. Égoutte et mélange avec la sauce."
+       ],
+       "time": 30,
+       "tips": [
+        "Si la sauce est trop liquide, finis 5 min / 100 °C sans le gobelet doseur."
+       ]
+      }
+     }
+    },
+    "difficulty": "Facile",
+    "ingredients": [
+     {
+      "group": "Sauce",
+      "item": "bœuf haché 5 % de matière grasse",
+      "qty": "400 g"
+     },
+     {
+      "group": "Sauce",
+      "item": "oignon",
+      "qty": "1"
+     },
+     {
+      "group": "Sauce",
+      "item": "ail",
+      "qty": "2 gousses"
+     },
+     {
+      "group": "Sauce",
+      "item": "carotte moyenne, râpée",
+      "qty": "1"
+     },
+     {
+      "group": "Sauce",
+      "item": "petite courgette, râpée",
+      "qty": "1"
+     },
+     {
+      "group": "Sauce",
+      "item": "tomates concassées en boîte",
+      "qty": "400 g"
+     },
+     {
+      "group": "Sauce",
+      "item": "concentré de tomates",
+      "qty": "2 c. à soupe"
+     },
+     {
+      "group": "Sauce",
+      "item": "huile d'olive",
+      "qty": "1 c. à soupe"
+     },
+     {
+      "group": "Sauce",
+      "item": "origan séché",
+      "qty": "1 c. à café"
+     },
+     {
+      "group": "Sauce",
+      "item": "sel",
+      "qty": "1 c. à café"
+     },
+     {
+      "group": "Pâtes",
+      "item": "spaghetti complets",
+      "qty": "300 g"
+     },
+     {
+      "group": "Pâtes",
+      "item": "parmesan râpé",
+      "qty": "40 g"
+     }
+    ],
+    "leftovers": "Il reste 2 portions : garde la sauce et les pâtes séparément, 3 jours au frigo dans des boîtes fermées. Tu peux aussi congeler la sauce seule 3 mois. Réchauffe à la poêle ou au micro-ondes jusqu'à ce que ce soit bien fumant.",
+    "moment": "Week-end",
+    "prep": 15,
+    "servings": 4,
+    "steps": [
+     "Hache l'oignon et l'ail. Rape la carotte et la courgette. Presse la courgette dans les mains pour retirer l'eau.",
+     "Fais chauffer l'huile dans une sauteuse à feu moyen. Fais revenir l'oignon 4 min, jusqu'à ce qu'il soit translucide. Ajoute l'ail 30 sec.",
+     "Ajoute le bœuf haché à feu vif. Émiette-le à la spatule et cuis 5 min, jusqu'à ce qu'il n'y ait plus de rose.",
+     "Ajoute la carotte et la courgette. Fais cuire 3 min en remuant.",
+     "Verse les tomates, le concentré, l'origan et le sel. Baisse à feu doux, couvre à moitié et laisse mijoter 20 min en remuant de temps en temps. La sauce est prête quand elle est épaisse et que l'huile remonte un peu.",
+     "Cuis les spaghettis dans l'eau bouillante salée le temps indiqué sur le paquet (souvent 10 à 12 min pour les complets). Garde une louche d'eau de cuisson, puis égoutte.",
+     "Mélange les pâtes avec la sauce, ajoute un peu d'eau de cuisson si besoin. Sers avec le parmesan."
+    ],
+    "tips": [
+     "Les légumes râpés fondent dans la sauce : on ne les voit presque plus, mais ils apportent douceur et fibres.",
+     "Un trait de lait ou un peu d'eau de cuisson adoucit l'acidité de la tomate, sans sucre."
+    ],
+    "title": "Pâtes bolognaise aux légumes cachés"
+   },
+   "hachis-parmentier": {
+    "cook": 45,
+    "cuisine": "Française",
+    "devices": {
+     "best": "classique",
+     "classicLabel": "Four et plaques",
+     "variants": {}
+    },
+    "difficulty": "Facile",
+    "ingredients": [
+     {
+      "group": "Viande",
+      "item": "bœuf haché 5 % de matière grasse",
+      "qty": "500 g"
+     },
+     {
+      "group": "Viande",
+      "item": "oignon",
+      "qty": "1"
+     },
+     {
+      "group": "Viande",
+      "item": "carottes",
+      "qty": "2"
+     },
+     {
+      "group": "Viande",
+      "item": "concentré de tomates",
+      "qty": "1 c. à soupe"
+     },
+     {
+      "group": "Viande",
+      "item": "huile d'olive",
+      "qty": "1 c. à soupe"
+     },
+     {
+      "group": "Viande",
+      "item": "thym",
+      "qty": "1 c. à café"
+     },
+     {
+      "group": "Viande",
+      "item": "sel",
+      "qty": "1 c. à café"
+     },
+     {
+      "group": "Purée",
+      "item": "pommes de terre à purée",
+      "qty": "800 g"
+     },
+     {
+      "group": "Purée",
+      "item": "lait demi-écrémé",
+      "qty": "100 ml"
+     },
+     {
+      "group": "Purée",
+      "item": "beurre ou huile d'olive",
+      "qty": "1 c. à soupe"
+     },
+     {
+      "group": "Purée",
+      "item": "muscade",
+      "qty": "1 pincée"
+     },
+     {
+      "group": "Gratin",
+      "item": "emmental râpé",
+      "qty": "50 g"
+     }
+    ],
+    "leftovers": "Il reste 2 portions : laisse refroidir, couvre et garde 3 jours au frigo. Réchauffe 20 min au four à 180 °C ou 3 min au micro-ondes par part. Tu peux congeler les parts individuelles jusqu'à 3 mois.",
+    "moment": "Week-end",
+    "prep": 25,
+    "servings": 4,
+    "steps": [
+     "Épluche les pommes de terre et coupe-les en morceaux. Cuis-les à l'eau bouillante salée 20 min, jusqu'à ce qu'elles soient tendres.",
+     "Pendant ce temps, hache l'oignon et coupe les carottes en petits dés.",
+     "Chauffe l'huile dans une sauteuse à feu moyen. Fais revenir l'oignon et les carottes 6 min. Ajoute le bœuf haché et cuis 6 min en l'émiettant, jusqu'à ce qu'il n'y ait plus de rose.",
+     "Ajoute le concentré, le thym et le sel. Verse un demi-verre d'eau. Laisse mijoter 5 min à feu doux, jusqu'à ce que la préparation soit juteuse mais pas liquide.",
+     "Préchauffe le four à 200 °C. Égoutte les pommes de terre, écrase-les avec le lait chaud, le beurre et la muscade.",
+     "Verse la viande dans un plat à gratin. Recouvre de purée, lisse à la fourchette et parsème de fromage.",
+     "Enfourne 20 à 25 min. Le hachis est prêt quand le dessus est doré et que les bords bouillonnent. Laisse reposer 5 min avant de servir."
+    ],
+    "tips": [
+     "Sers avec une salade verte pour ajouter encore des légumes.",
+     "Fais des sillons à la fourchette sur la purée : ils dorent et croustillent."
+    ],
+    "title": "Hachis parmentier de bœuf"
+   },
+   "tajine-poulet-citron-olives": {
+    "cook": 50,
+    "cuisine": "Marocaine",
+    "devices": {
+     "best": "classique",
+     "classicLabel": "Cocotte ou tajine",
+     "variants": {
+      "airfryer": {
+       "steps": [
+        "Émince les oignons, écrase l'ail et coupe les carottes en gros bâtonnets. Enrobe les hauts de cuisse de 1 c. à s. d'huile, du gingembre, du curcuma, du poivre et du safran.",
+        "Préchauffe l'airfryer 3 min à 200 °C. Cuis 4 hauts de cuisse, peau dessus : 18 min, en les retournant à mi-cuisson. Refais avec les 4 autres (8 ne tiennent pas dans le panier).",
+        "Le poulet est prêt quand la peau est dorée et que la chair atteint au moins 74 °C.",
+        "Pendant ce temps, dans une cocotte, fais revenir les oignons et l'ail dans 2 c. à s. d'huile 5 min. Ajoute les carottes et 300 ml d'eau, couvre et laisse mijoter 15 min avec la moitié des herbes.",
+        "Ajoute les citrons confits en quartiers, les olives et le poulet doré : 10 min à couvert pour que la sauce parfume la viande.",
+        "Parsème du reste de coriandre et de persil, goûte et sers avec le pain complet."
+       ],
+       "time": 55,
+       "tips": [
+        "Le mijotage complet en cocotte ou tajine reste meilleur pour le week-end : viande plus fondante, sauce plus parfumée.",
+        "8 hauts de cuisse dépassent la capacité du bol : pas de version Thermomix pour 4 personnes."
+       ]
+      }
+     }
+    },
+    "difficulty": "Moyen",
+    "ingredients": [
+     {
+      "item": "hauts de cuisse de poulet",
+      "qty": "8"
+     },
+     {
+      "item": "oignons",
+      "qty": "2"
+     },
+     {
+      "item": "gousses d'ail",
+      "qty": "3"
+     },
+     {
+      "item": "carottes",
+      "qty": "4"
+     },
+     {
+      "item": "citrons confits",
+      "qty": "2"
+     },
+     {
+      "item": "olives vertes",
+      "qty": "150 g"
+     },
+     {
+      "item": "gingembre en poudre",
+      "qty": "1 c. à c."
+     },
+     {
+      "item": "curcuma",
+      "qty": "1 c. à c."
+     },
+     {
+      "item": "poivre noir",
+      "qty": "1/2 c. à c."
+     },
+     {
+      "item": "safran ou colorant alimentaire",
+      "qty": "1 pincée"
+     },
+     {
+      "item": "huile d'olive",
+      "qty": "3 c. à s."
+     },
+     {
+      "item": "eau",
+      "qty": "300 ml"
+     },
+     {
+      "item": "coriandre et persil",
+      "qty": "quelques brins"
+     },
+     {
+      "group": "Pour servir",
+      "item": "khobz d'orge",
+      "qty": "4 portions"
+     }
+    ],
+    "leftovers": "Le lendemain midi, réchauffe le reste de tajine à la poêle ou au micro-ondes et sers-le avec une salade verte bien assaisonnée.",
+    "moment": "Dîner",
+    "prep": 20,
+    "servings": 4,
+    "steps": [
+     "Émince les oignons finement et écrase l'ail. Coupe les carottes en gros bâtonnets.",
+     "Dans une cocotte ou un tajine, fais chauffer l'huile d'olive à feu moyen et fais revenir les oignons et l'ail 5 min jusqu'à ce qu'ils deviennent translucides.",
+     "Ajoute le gingembre, le curcuma, le poivre et le safran, mélange 1 min pour parfumer l'huile.",
+     "Dépose les hauts de cuisse dans la cocotte, enrobe-les bien des épices et fais-les dorer 5 min de chaque côté.",
+     "Ajoute les carottes, l'eau, la moitié de la coriandre et du persil ciselés, couvre et laisse mijoter à feu doux 35 min.",
+     "Ajoute les citrons confits coupés en quartiers et les olives, poursuis la cuisson à couvert 10 min : le poulet est prêt quand il se détache facilement de l'os.",
+     "Vérifie l'assaisonnement, parsème du reste de coriandre et de persil et sers chaud avec le khobz d'orge."
+    ],
+    "tips": [
+     "Pas de plat à tajine : une cocotte en fonte fait très bien l'affaire.",
+     "Rince rapidement les olives et les citrons confits sous l'eau pour réduire le sel."
+    ],
+    "title": "Tajine de poulet au citron confit et olives"
+   },
+   "couscous-sept-legumes": {
+    "cook": 60,
+    "cuisine": "Marocaine",
+    "devices": {
+     "best": "classique",
+     "classicLabel": "Plaques",
+     "variants": {}
+    },
+    "difficulty": "Moyen",
+    "ingredients": [
+     {
+      "item": "hauts de cuisses de poulet",
+      "qty": "4"
+     },
+     {
+      "item": "oignon, émincé",
+      "qty": "1"
+     },
+     {
+      "item": "carottes, épluchées et coupées en tronçons",
+      "qty": "3"
+     },
+     {
+      "item": "navets, épluchés et coupés en quartiers",
+      "qty": "2"
+     },
+     {
+      "item": "courgettes, coupées en tronçons",
+      "qty": "2"
+     },
+     {
+      "item": "courge, coupée en gros cubes",
+      "qty": "300 g"
+     },
+     {
+      "item": "chou blanc, coupé en quartiers",
+      "qty": "1/4"
+     },
+     {
+      "item": "tomates, coupées en morceaux",
+      "qty": "2"
+     },
+     {
+      "item": "pois chiches, cuits ou en boîte égouttés",
+      "qty": "80 g"
+     },
+     {
+      "item": "smen (facultatif)",
+      "qty": "1 c. à c."
+     },
+     {
+      "item": "ras el hanout",
+      "qty": "1 c. à s."
+     },
+     {
+      "item": "curcuma",
+      "qty": "1 c. à c."
+     },
+     {
+      "item": "gingembre en poudre",
+      "qty": "1 c. à c."
+     },
+     {
+      "item": "coriandre et persil, ficelés ensemble",
+      "qty": "1 bouquet"
+     },
+     {
+      "item": "huile d'olive",
+      "qty": "3 c. à s."
+     },
+     {
+      "item": "eau",
+      "qty": "1,2 l"
+     },
+     {
+      "item": "semoule complète",
+      "qty": "300 g"
+     },
+     {
+      "item": "pincée de sel et de poivre",
+      "qty": "1"
+     }
+    ],
+    "moment": "Week-end",
+    "prep": 25,
+    "servings": 4,
+    "steps": [
+     "Fais chauffer l'huile d'olive dans le fond du couscoussier ou une grande cocotte à feu moyen, ajoute l'oignon et le poulet, fais dorer 5 min sur toutes les faces.",
+     "Ajoute le ras el hanout, le curcuma et le gingembre, mélange 1 min pour bien enrober le poulet d'épices.",
+     "Verse l'eau, ajoute le bouquet de coriandre-persil, le smen si tu en utilises, sale et poivre, porte à ébullition puis laisse mijoter 15 min à couvert.",
+     "Ajoute les carottes et les navets, laisse mijoter encore 15 min à couvert.",
+     "Ajoute le chou, la courge, les tomates et les pois chiches, poursuis la cuisson 15 à 20 min : les légumes doivent être fondants mais garder leur tenue.",
+     "Ajoute les courgettes en dernier et laisse cuire encore 10 min, jusqu'à ce que tous les légumes soient tendres à la pointe du couteau.",
+     "Pendant ce temps, prépare la semoule : verse-la dans un grand plat, couvre à hauteur d'eau tiède salée, laisse gonfler 10 min puis égraine à la fourchette avec un filet d'huile d'olive. Si tu utilises un couscoussier, place la semoule dans le panier vapeur au-dessus du bouillon parfumé pendant les 20 dernières minutes de cuisson des légumes.",
+     "Goûte le bouillon et rectifie l'assaisonnement si besoin, retire le bouquet d'herbes.",
+     "Dresse la semoule dans un grand plat creux, dispose le poulet et les légumes par-dessus, arrose de quelques louches de bouillon et sers le reste du bouillon à part."
+    ],
+    "tips": [
+     "Le smen apporte le goût traditionnel mais reste facultatif : le plat est déjà bien parfumé sans lui.",
+     "Prépare le bouillon de légumes la veille, il n'en sera que plus parfumé une fois réchauffé le jour même."
+    ],
+    "title": "Couscous marocain aux sept légumes et poulet"
+   },
+   "shakshuka-feta": {
+    "cook": 25,
+    "cuisine": "Marocaine",
+    "devices": {
+     "best": "classique",
+     "classicLabel": "Plaques",
+     "variants": {}
+    },
+    "difficulty": "Facile",
+    "ingredients": [
+     {
+      "item": "oignon",
+      "qty": "1"
+     },
+     {
+      "item": "poivron rouge",
+      "qty": "1"
+     },
+     {
+      "item": "ail",
+      "qty": "2 gousses"
+     },
+     {
+      "item": "huile d'olive",
+      "qty": "2 c. à soupe"
+     },
+     {
+      "item": "cumin moulu",
+      "qty": "1 c. à café"
+     },
+     {
+      "item": "paprika doux",
+      "qty": "1 c. à café"
+     },
+     {
+      "item": "piment doux ou piment d'Espelette",
+      "qty": "1/2 c. à café"
+     },
+     {
+      "item": "tomates concassées",
+      "qty": "400 g"
+     },
+     {
+      "item": "œufs",
+      "qty": "4"
+     },
+     {
+      "item": "feta",
+      "qty": "60 g"
+     },
+     {
+      "item": "coriandre fraîche",
+      "qty": "1/2 bouquet"
+     },
+     {
+      "item": "pain complet",
+      "qty": "2 tranches"
+     }
+    ],
+    "moment": "Week-end",
+    "prep": 10,
+    "servings": 2,
+    "steps": [
+     "Émince l'oignon, coupe le poivron en dés de 1 cm et hache l'ail.",
+     "Chauffe l'huile d'olive dans une grande poêle avec couvercle, à feu moyen. Ajoute l'oignon et le poivron et cuis 8 min en remuant, jusqu'à ce qu'ils soient tendres et légèrement dorés.",
+     "Ajoute l'ail, le cumin, le paprika et le piment. Remue 1 min, jusqu'à ce que les épices embaument.",
+     "Verse les tomates, sale et poivre. Laisse mijoter 10 min à feu moyen-doux, sans couvercle, jusqu'à ce que la sauce soit épaisse (sans flaque d'eau autour).",
+     "Fais 4 creux à la cuillère dans la sauce et casse un œuf dans chacun. Sale légèrement les œufs.",
+     "Couvre et cuis 5 à 7 min à feu doux. Les blancs doivent être pris et les jaunes encore brillants.",
+     "Pendant la cuisson des œufs, grille le pain complet. Émiette la feta sur la poêle, ajoute la coriandre ciselée et sers dans la poêle avec le pain."
+    ],
+    "tips": [
+     "Si la sauce est trop acide, ajoute 1 c. à café de concentré de tomate ou, au besoin, une pointe de miel.",
+     "Surveille les œufs : ils continuent de cuire dans la sauce chaude après le feu."
+    ],
+    "title": "Shakshuka à la feta"
+   },
+   "poulet-tikka-masala": {
+    "cook": 30,
+    "cuisine": "Indienne",
+    "devices": {
+     "best": "thermomix",
+     "classicLabel": "Four et plaques",
+     "variants": {
+      "airfryer": {
+       "steps": [
+        "Coupe le poulet en cubes de 3 cm et mélange-le avec la marinade. Laisse reposer 20 min minimum au frais.",
+        "Préchauffe l'airfryer 3 min à 200 °C. Dépose le poulet en une seule couche dans le panier, en deux fournées si besoin.",
+        "Cuis 12 à 14 min à 200 °C en secouant le panier à mi-cuisson. Le poulet est prêt à 74 °C à cœur, sans trace de rose et bien doré.",
+        "Pendant ce temps, cuis le riz basmati complet : 250 ml d'eau salée, à couvert, 22 à 25 min à feu doux.",
+        "Fais revenir l'oignon émincé 5 min dans l'huile d'olive, ajoute l'ail, le gingembre, le garam masala et le concentré, 1 min.",
+        "Ajoute les tomates et 100 ml d'eau, mijote 12 min à feu doux, mixe, puis incorpore le yaourt hors du feu.",
+        "Mélange le poulet à la sauce 2 min à feu très doux. Sers sur le riz avec la coriandre."
+       ],
+       "time": 40,
+       "tips": [
+        "Les cubes sont dorés à l'extérieur et restent juteux, sans four à allumer."
+       ]
+      },
+      "thermomix": {
+       "steps": [
+        "Coupe le poulet en cubes, mélange-le à la marinade et laisse reposer 20 min minimum au frais.",
+        "Prépare le riz : rince 120 g de basmati complet, mets-le dans une casserole avec 250 ml d'eau salée, couvre et cuis 22 à 25 min à feu doux.",
+        "Préchauffe l'airfryer 3 min à 200 °C. Cuis le poulet 12 à 14 min à 200 °C en secouant à mi-cuisson, jusqu'à 74 °C à cœur.",
+        "Dans le bol, mets l'oignon coupé en quatre, l'ail et le gingembre : 5 s/vitesse 5. Racle les parois.",
+        "Ajoute l'huile d'olive : 3 min/120 °C/vitesse 1. Ajoute le garam masala et le concentré : 1 min/120 °C/vitesse 1.",
+        "Ajoute les tomates concassées, 100 g d'eau et du sel. Pose le panier de cuisson à la place du gobelet pour éviter les éclaboussures. Cuis 15 min/100 °C/vitesse 1.",
+        "Mixe 1 min en montant progressivement de la vitesse 5 à la vitesse 8. Ajoute 80 g de yaourt : 10 s/vitesse 3.",
+        "Verse la sauce sur le poulet dans un plat, mélange, et sers sur le riz avec la coriandre."
+       ],
+       "time": 35,
+       "tips": [
+        "La sauce est parfaitement lisse sans mixeur plongeur et sans surveiller la casserole."
+       ]
+      }
+     }
+    },
+    "difficulty": "Facile",
+    "ingredients": [
+     {
+      "group": "Marinade",
+      "item": "blancs de poulet (ou hauts de cuisse désossés)",
+      "qty": "350 g"
+     },
+     {
+      "group": "Marinade",
+      "item": "yaourt grec nature",
+      "qty": "3 c. à soupe"
+     },
+     {
+      "group": "Marinade",
+      "item": "jus de citron",
+      "qty": "1 c. à soupe"
+     },
+     {
+      "group": "Marinade",
+      "item": "paprika doux",
+      "qty": "1 c. à café"
+     },
+     {
+      "group": "Marinade",
+      "item": "cumin moulu",
+      "qty": "1 c. à café"
+     },
+     {
+      "group": "Marinade",
+      "item": "curcuma",
+      "qty": "1/2 c. à café"
+     },
+     {
+      "group": "Marinade",
+      "item": "ail râpé",
+      "qty": "1 gousse"
+     },
+     {
+      "group": "Sauce",
+      "item": "oignon",
+      "qty": "1"
+     },
+     {
+      "group": "Sauce",
+      "item": "ail",
+      "qty": "2 gousses"
+     },
+     {
+      "group": "Sauce",
+      "item": "gingembre frais",
+      "qty": "2 cm"
+     },
+     {
+      "group": "Sauce",
+      "item": "huile d'olive",
+      "qty": "1 c. à soupe"
+     },
+     {
+      "group": "Sauce",
+      "item": "garam masala",
+      "qty": "2 c. à café"
+     },
+     {
+      "group": "Sauce",
+      "item": "concentré de tomate",
+      "qty": "1 c. à soupe"
+     },
+     {
+      "group": "Sauce",
+      "item": "tomates concassées",
+      "qty": "400 g"
+     },
+     {
+      "group": "Sauce",
+      "item": "yaourt grec ou 3 c. à soupe de lait de coco",
+      "qty": "80 g"
+     },
+     {
+      "group": "Service",
+      "item": "riz basmati complet",
+      "qty": "120 g"
+     },
+     {
+      "group": "Service",
+      "item": "coriandre fraîche",
+      "qty": "1/2 bouquet"
+     }
+    ],
+    "moment": "Dîner",
+    "prep": 20,
+    "servings": 2,
+    "steps": [
+     "Coupe le poulet en cubes de 3 cm. Mélange tous les ingrédients de la marinade dans un saladier, ajoute le poulet et enrobe bien. Laisse mariner 20 min minimum au frais (jusqu'à 12 h).",
+     "Préchauffe le four à 220 °C chaleur tournante. Étale le poulet sur une plaque recouverte de papier cuisson, sans que les morceaux se touchent.",
+     "Enfourne 15 à 18 min en retournant à mi-cuisson. Le poulet est prêt quand il n'est plus rose à cœur (74 °C) et que les bords sont dorés.",
+     "Rince le riz. Mets-le dans une casserole avec 250 ml d'eau salée, couvre et cuis à feu doux 22 à 25 min jusqu'à absorption. Laisse gonfler 5 min couvert.",
+     "Émince l'oignon et fais-le revenir dans l'huile d'olive à feu moyen 5 min, jusqu'à ce qu'il soit translucide. Ajoute l'ail et le gingembre râpés, le garam masala et le concentré, et cuis 1 min en remuant.",
+     "Verse les tomates concassées et 100 ml d'eau, sale, puis laisse mijoter à feu doux 12 min. Mixe au mixeur plongeur jusqu'à obtenir une sauce lisse.",
+     "Hors du feu, incorpore le yaourt (ou le lait de coco) pour qu'il ne tourne pas. Ajoute le poulet et réchauffe 2 min à feu très doux.",
+     "Sers sur le riz et parsème de coriandre ciselée."
+    ],
+    "tips": [
+     "Les hauts de cuisse restent plus moelleux que les blancs, surtout si tu réchauffes le plat.",
+     "Ne fais jamais bouillir la sauce une fois le yaourt ajouté : il tournerait.",
+     "Sauce trop épaisse ? Allonge avec une cuillerée d'eau chaude."
+    ],
+    "title": "Poulet tikka masala léger"
+   },
+   "pizza-maison-legumes": {
+    "cook": 12,
+    "cuisine": "Méditerranéenne",
+    "devices": {
+     "best": "thermomix",
+     "classicLabel": "Four",
+     "variants": {
+      "thermomix": {
+       "steps": [
+        "Verse 160 g d'eau tiède, la levure et 1 c. à soupe d'huile d'olive dans le bol : 20 s/37 °C/vitesse 1.",
+        "Ajoute 250 g de farine semi-complète et le sel : 10 s/vitesse 6, puis 2 min en mode Pétrin. La pâte doit former une boule lisse.",
+        "Sors la pâte, forme une boule dans un saladier huilé, couvre d'un linge et laisse lever 1 h dans un endroit tiède, jusqu'à ce qu'elle double.",
+        "Mélange les tomates, l'ail, l'origan, l'huile, du sel et du poivre. Émince les légumes et déchire la mozzarella.",
+        "Préchauffe le four avec une plaque à 250 °C pendant 15 min. Divise la pâte en deux et étale deux disques de 25 cm sur du papier cuisson.",
+        "Garnis de sauce, de légumes, de mozzarella, d'olives et de poulet éventuel. Cuis chaque pizza 10 à 12 min, jusqu'à ce que les bords soient dorés.",
+        "Ajoute la roquette et un filet d'huile d'olive à la sortie du four."
+       ],
+       "time": 70,
+       "tips": [
+        "Le mode Pétrin remplace 10 min de pétrissage à la main et la pâte reste propre dans le bol."
+       ]
+      }
+     }
+    },
+    "difficulty": "Moyen",
+    "ingredients": [
+     {
+      "group": "Pâte",
+      "item": "farine semi-complète (T80)",
+      "qty": "250 g"
+     },
+     {
+      "group": "Pâte",
+      "item": "eau tiède",
+      "qty": "160 g"
+     },
+     {
+      "group": "Pâte",
+      "item": "levure boulangère sèche (1 sachet)",
+      "qty": "7 g"
+     },
+     {
+      "group": "Pâte",
+      "item": "huile d'olive",
+      "qty": "1 c. à soupe"
+     },
+     {
+      "group": "Pâte",
+      "item": "sel",
+      "qty": "1 c. à café"
+     },
+     {
+      "group": "Sauce",
+      "item": "tomates concassées",
+      "qty": "200 g"
+     },
+     {
+      "group": "Sauce",
+      "item": "ail râpé",
+      "qty": "1 gousse"
+     },
+     {
+      "group": "Sauce",
+      "item": "origan séché",
+      "qty": "1 c. à café"
+     },
+     {
+      "group": "Sauce",
+      "item": "huile d'olive",
+      "qty": "1 c. à soupe"
+     },
+     {
+      "group": "Garniture",
+      "item": "mozzarella",
+      "qty": "125 g"
+     },
+     {
+      "group": "Garniture",
+      "item": "courgette",
+      "qty": "1/2"
+     },
+     {
+      "group": "Garniture",
+      "item": "poivron",
+      "qty": "1/2"
+     },
+     {
+      "group": "Garniture",
+      "item": "champignons de Paris",
+      "qty": "100 g"
+     },
+     {
+      "group": "Garniture",
+      "item": "oignon rouge",
+      "qty": "1/2"
+     },
+     {
+      "group": "Garniture",
+      "item": "olives noires",
+      "qty": "30 g"
+     },
+     {
+      "group": "Garniture",
+      "item": "roquette (au service)",
+      "qty": "1 poignée"
+     },
+     {
+      "group": "Garniture",
+      "item": "poulet cuit en lamelles (facultatif)",
+      "qty": "100 g"
+     }
+    ],
+    "moment": "Week-end",
+    "prep": 75,
+    "servings": 2,
+    "steps": [
+     "Verse la farine dans un grand saladier avec le sel. Dilue la levure dans l'eau tiède avec l'huile, puis verse sur la farine.",
+     "Mélange puis pétris sur le plan de travail 8 à 10 min, jusqu'à ce que la pâte soit lisse, souple et ne colle plus aux doigts.",
+     "Couvre d'un linge et laisse lever 1 h dans un endroit tiède, jusqu'à ce que la pâte double de volume.",
+     "Pendant ce temps, mélange les tomates, l'ail, l'origan, l'huile d'olive, du sel et du poivre. Émince finement la courgette, le poivron, les champignons et l'oignon. Égoutte et déchire la mozzarella.",
+     "Place une plaque de four au milieu et préchauffe à 250 °C (chaleur tournante) pendant 15 min. Divise la pâte en deux et étale chaque boule en disque de 25 cm sur du papier cuisson.",
+     "Étale une fine couche de sauce, répartis les légumes, la mozzarella, les olives et le poulet éventuel. Ne surcharge pas : la pâte doit rester croustillante.",
+     "Fais glisser la pizza avec son papier sur la plaque brûlante. Cuis 10 à 12 min, jusqu'à ce que les bords soient dorés et la mozzarella tachetée.",
+     "Sors-la du four, ajoute la roquette et un filet d'huile d'olive juste avant de servir. Enfourne la seconde pizza."
+    ],
+    "tips": [
+     "Précuis les champignons 2 min à la poêle si tu veux éviter qu'ils rendent de l'eau.",
+     "Une plaque très chaude donne un dessous croustillant : ne l'oublie pas au préchauffage.",
+     "La pâte se garde 24 h au frais dans un récipient fermé pour une pizza du lendemain."
+    ],
+    "title": "Pizza maison aux légumes et pâte semi-complète"
+   },
+   "croque-dinde-salade": {
+    "cook": 8,
+    "cuisine": "Française",
+    "devices": {
+     "best": "airfryer",
+     "classicLabel": "Four",
+     "variants": {
+      "airfryer": {
+       "steps": [
+        "Étale la béchamel ou la crème fraîche sur 2 tranches de pain, avec la muscade.",
+        "Ajoute le jambon de dinde et la moitié de l'emmental. Ferme et saupoudre du reste de fromage.",
+        "Dépose les croques dans l'airfryer préchauffé, sur du papier perforé. Cuis 8 min à 180 °C.",
+        "Prêt quand le fromage est fondu et doré, et que le pain est croustillant sur les bords.",
+        "Prépare la vinaigrette, mélange avec la salade et sers aussitôt."
+       ],
+       "time": 8,
+       "tips": [
+        "Si ton airfryer est petit, cuis les croques l'un après l'autre : ils ne doivent pas se chevaucher."
+       ]
+      }
+     }
+    },
+    "difficulty": "Facile",
+    "ingredients": [
+     {
+      "group": "Croque-monsieur",
+      "item": "pain de mie complet",
+      "qty": "4 tranches"
+     },
+     {
+      "group": "Croque-monsieur",
+      "item": "jambon de dinde",
+      "qty": "2 tranches"
+     },
+     {
+      "group": "Croque-monsieur",
+      "item": "emmental râpé",
+      "qty": "40 g"
+     },
+     {
+      "group": "Croque-monsieur",
+      "item": "béchamel ou crème fraîche légère",
+      "qty": "2 c. à soupe"
+     },
+     {
+      "group": "Croque-monsieur",
+      "item": "muscade",
+      "qty": "1 pincée"
+     },
+     {
+      "group": "Salade",
+      "item": "salade verte",
+      "qty": "1 poignée"
+     },
+     {
+      "group": "Salade",
+      "item": "huile d'olive",
+      "qty": "1 c. à soupe"
+     },
+     {
+      "group": "Salade",
+      "item": "vinaigre ou jus de citron",
+      "qty": "1 c. à café"
+     },
+     {
+      "group": "Salade",
+      "item": "moutarde",
+      "qty": "1 c. à café"
+     }
+    ],
+    "moment": "Midi rapide",
+    "prep": 10,
+    "servings": 2,
+    "steps": [
+     "Étale la béchamel ou la crème fraîche sur 2 tranches de pain. Ajoute une pincée de muscade.",
+     "Pose une tranche de jambon de dinde, puis la moitié de l'emmental. Ferme avec les tranches restantes.",
+     "Dépose le reste d'emmental sur le dessus.",
+     "Cuis à l'airfryer préchauffé 8 min à 180 °C, sans retourner. Ou au four à 200 °C pendant 10 min, en position grill.",
+     "Le croque est prêt quand le fromage est fondu et doré, et que le pain est croustillant.",
+     "Pendant la cuisson, lave la salade. Mélange l'huile, le vinaigre, la moutarde et une pincée de sel pour la vinaigrette. Assaisonne juste avant de servir."
+    ],
+    "tips": [
+     "Pose un peu de papier de cuisson perforé sous les croques dans l'airfryer : le fromage ne colle pas.",
+     "Ajoute une tranche de tomate ou quelques épinards dans le croque pour plus de légumes."
+    ],
+    "title": "Croque-monsieur à la dinde et salade verte"
+   },
+   "omelette-fromage-pommes-sautees": {
+    "cook": 20,
+    "cuisine": "Française",
+    "devices": {
+     "best": "airfryer",
+     "classicLabel": "Plaques",
+     "variants": {
+      "airfryer": {
+       "steps": [
+        "Coupe les pommes de terre en dés de 1,5 cm. Rince, sèche, puis mélange avec l'huile, le sel et le paprika.",
+        "Cuis dans l'airfryer préchauffé 18 à 20 min à 190 °C. Secoue le panier 2 fois en cours de cuisson.",
+        "Elles sont prêtes quand elles sont dorées et fondantes à l'intérieur.",
+        "Pendant ce temps, bats les œufs avec les herbes, le sel et le poivre. Cuis l'omelette à la poêle à feu moyen : 2 min, puis ajoute le fromage et plie.",
+        "Sers avec la salade assaisonnée."
+       ],
+       "time": 20,
+       "tips": [
+        "Ne remplis pas trop le panier : les pommes de terre doivent rester en une couche presque unique."
+       ]
+      }
+     }
+    },
+    "difficulty": "Facile",
+    "ingredients": [
+     {
+      "group": "Pommes de terre",
+      "item": "pommes de terre à chair ferme",
+      "qty": "400 g"
+     },
+     {
+      "group": "Pommes de terre",
+      "item": "huile d'olive",
+      "qty": "1 c. à soupe"
+     },
+     {
+      "group": "Pommes de terre",
+      "item": "paprika doux",
+      "qty": "1 c. à café"
+     },
+     {
+      "group": "Omelette",
+      "item": "œufs",
+      "qty": "4"
+     },
+     {
+      "group": "Omelette",
+      "item": "fromage râpé (emmental ou gruyère)",
+      "qty": "40 g"
+     },
+     {
+      "group": "Omelette",
+      "item": "herbes fraîches ciselées (ciboulette, persil)",
+      "qty": "2 c. à soupe"
+     },
+     {
+      "group": "Omelette",
+      "item": "beurre ou huile",
+      "qty": "1 c. à café"
+     },
+     {
+      "group": "Salade",
+      "item": "salade verte",
+      "qty": "1 poignée"
+     },
+     {
+      "group": "Salade",
+      "item": "vinaigrette maison (huile, moutarde, citron)",
+      "qty": "1 c. à soupe"
+     },
+     {
+      "item": "sel et poivre",
+      "qty": "1 pincée"
+     }
+    ],
+    "moment": "Midi rapide",
+    "prep": 10,
+    "servings": 2,
+    "steps": [
+     "Coupe les pommes de terre en dés de 1,5 cm, sans les éplucher si la peau est fine. Rince-les et sèche-les bien.",
+     "Fais chauffer l'huile dans une poêle à feu moyen. Ajoute les pommes de terre et le sel, couvre et cuis 10 min en remuant 2 ou 3 fois.",
+     "Retire le couvercle, monte à feu moyen-vif et cuis encore 8 à 10 min. Ajoute le paprika. Elles sont prêtes quand elles sont dorées et tendres à cœur.",
+     "Pendant ce temps, bats les œufs avec les herbes, le sel et le poivre.",
+     "Fais fondre le beurre dans une poêle antiadhésive à feu moyen. Verse les œufs et remue 30 sec. Laisse prendre 1 à 2 min.",
+     "Quand le dessus est encore un peu baveux, ajoute le fromage et plie l'omelette en deux. Laisse 30 sec de plus.",
+     "Sers avec les pommes de terre et la salade assaisonnée."
+    ],
+    "tips": [
+     "Sécher les pommes de terre évite qu'elles vapeurisent et collent : elles dorent mieux.",
+     "Cuis l'omelette à feu doux à moyen : elle reste moelleuse et ne brunit pas trop."
+    ],
+    "title": "Omelette aux herbes, pommes de terre sautées et salade"
+   }
+  },
+  "months": {
+   "exemple": {
+    "label": "Semaine d'exemple",
+    "start": "2026-10-26",
+    "end": "2026-11-01",
+    "weeks": [
+     {
+      "label": "Semaine 1",
+      "days": [
+       {
+        "day": "Lundi",
+        "date": "2026-10-26",
+        "midi": {
+         "name": "Omelette aux herbes, pommes de terre sautées et salade",
+         "rating": 0,
+         "recipeId": "omelette-fromage-pommes-sautees"
+        },
+        "soir": {
+         "name": "Poulet tikka masala léger",
+         "rating": 0,
+         "recipeId": "poulet-tikka-masala"
+        }
+       },
+       {
+        "day": "Mardi",
+        "date": "2026-10-27",
+        "midi": {
+         "name": "Croque-monsieur à la dinde et salade verte",
+         "rating": 0,
+         "recipeId": "croque-dinde-salade"
+        },
+        "soir": {
+         "name": "Tajine de poulet au citron confit et olives",
+         "rating": 0,
+         "recipeId": "tajine-poulet-citron-olives"
+        }
+       },
+       {
+        "day": "Mercredi",
+        "date": "2026-10-28",
+        "midi": {
+         "name": "",
+         "rating": 0,
+         "off": "site"
+        },
+        "soir": {
+         "name": "Shakshuka à la feta",
+         "rating": 0,
+         "recipeId": "shakshuka-feta"
+        }
+       },
+       {
+        "day": "Jeudi",
+        "date": "2026-10-29",
+        "midi": {
+         "name": "Croque-monsieur à la dinde et salade verte",
+         "rating": 0,
+         "recipeId": "croque-dinde-salade"
+        },
+        "soir": {
+         "name": "Hachis parmentier de bœuf",
+         "rating": 0,
+         "recipeId": "hachis-parmentier"
+        }
+       },
+       {
+        "day": "Vendredi",
+        "date": "2026-10-30",
+        "midi": {
+         "name": "Omelette aux herbes, pommes de terre sautées et salade",
+         "rating": 0,
+         "recipeId": "omelette-fromage-pommes-sautees"
+        },
+        "soir": {
+         "name": "",
+         "rating": 0,
+         "off": "commande"
+        }
+       },
+       {
+        "day": "Samedi",
+        "date": "2026-10-31",
+        "midi": {
+         "name": "Pizza maison aux légumes et pâte semi-complète",
+         "rating": 0,
+         "recipeId": "pizza-maison-legumes"
+        },
+        "soir": {
+         "name": "Couscous marocain aux sept légumes et poulet",
+         "rating": 0,
+         "recipeId": "couscous-sept-legumes"
+        }
+       },
+       {
+        "day": "Dimanche",
+        "date": "2026-11-01",
+        "midi": {
+         "name": "Purée maison, cordons bleus et haricots verts",
+         "rating": 0,
+         "recipeId": "puree-cordon-bleu"
+        },
+        "soir": {
+         "name": "Pâtes bolognaise aux légumes cachés",
+         "rating": 0,
+         "recipeId": "pates-bolognaise"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "courses": {},
+  "settings": {
+   "stock": {
+    "fresh": [
+     "Œufs",
+     "Tomates",
+     "Oignons"
+    ],
+    "freezer": [
+     "Cordons bleus"
+    ],
+    "pantry": [
+     "Riz",
+     "Pâtes",
+     "Semoule"
+    ]
+   }
+  }
+ }
+}
