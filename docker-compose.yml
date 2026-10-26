@@ -1,0 +1,14 @@
+services:
+  carnet:
+    build: .
+    container_name: carnet-repas
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      # Mot de passe pour ouvrir le carnet : change-le !
+      PASSWORD: "change-moi"
+      TZ: "Europe/Paris"
+    volumes:
+      # Les données (db.json et sauvegardes quotidiennes) restent sur le serveur
+      - ./data:/data
