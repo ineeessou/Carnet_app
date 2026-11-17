@@ -424,9 +424,10 @@ button.bm-name.link:hover{text-decoration-color:var(--saffron)}
 
 /* Écran de cuisine : plus grand, sans ce qui sert à modifier */
 html{font-size:17px}
+.kreload span{font-weight:500;opacity:.85;margin-left:6px}
 .kreload{position:fixed;right:12px;bottom:12px;z-index:40;border:0;border-radius:999px;background:var(--blue);color:#fff;font-weight:700;font-size:15px;padding:10px 16px;box-shadow:0 4px 14px rgba(10,16,60,.25)}
 body{font-size:17px}
-.bilanbar,.bilanline,.ideas,.store,.hint,.add,.aisle,.pastlink,.tab[data-id="courses"],.tab[data-id="frigo"]{display:none!important}
+.bilanbar,.bilanline,.ideas,.store,.hint,.add,.aisle,.pastlink{display:none!important}
 .bm-name{font-size:28px}
 .ck-step{font-size:30px}
 @supports not (display:grid){
@@ -439,7 +440,7 @@ body{font-size:17px}
 </style>
 </head>
 <body>
-<button class="kreload" onclick="location.reload()" aria-label="Actualiser">&#8635; Actualiser</button>
+<button class="kreload" onclick="location.reload()" aria-label="Actualiser">&#8635; Actualiser<span id="kstamp"></span></button>
 <div id="app"></div>
 <div class="toast" id="toast" hidden></div>
 <script src="cuisine.js"></script>

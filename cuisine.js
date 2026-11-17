@@ -852,6 +852,10 @@ try {
       }
       if (d.genere !== stamp) {
         stamp = d.genere || '';
+        try {
+          var p = stamp.slice(0, 10).split('-');
+          document.getElementById('kstamp').textContent = '· données du ' + p[2] + '/' + p[1];
+        } catch (e) {}
         Object.keys(d.collections).forEach(function (c) {
           cache[c] = d.collections[c] || {};
         });
