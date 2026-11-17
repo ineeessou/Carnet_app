@@ -1049,7 +1049,7 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
     readOnly: !!window.__KIOSK,
     dirty: false
   };
-  var TABS = ['today', 'plan', 'courses', 'frigo', 'recettes', 'historique'];
+  var TABS = ['today', 'plan', 'courses', 'frigo', 'recettes'];
   var h = (location.hash || '').slice(1);
   S.tab = TABS.includes(h) ? h : 'today';
   S.cook = null;
@@ -1268,10 +1268,10 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
     }).join('') + '</div>';
     top += '</div>' + (S.tab === 'today' ? '' : todayCard(m));
     var html = hero(top) + '<div class="wrap">';
-    html += '<nav class="tabs" role="tablist">' + tabBtn('today', 'Aujourd\'hui', '') + tabBtn('plan', 'Planning', '') + tabBtn('courses', 'Courses', list ? '<span class="count">' + left + '</span>' : '') + tabBtn('frigo', 'Frigo', '') + tabBtn('recettes', 'Recettes', '') + tabBtn('historique', 'Historique', '') + '</nav>';
+    html += '<nav class="tabs" role="tablist">' + tabBtn('today', 'Aujourd\'hui', '') + tabBtn('plan', 'Planning', '') + tabBtn('courses', 'Courses', list ? '<span class="count">' + left + '</span>' : '') + tabBtn('frigo', 'Frigo', '') + tabBtn('recettes', 'Recettes', '') + '</nav>';
     html += '<main class="' + (S.readOnly ? 'ro' : '') + '">';
     if (S.used && (S.tab === 'today' || S.tab === 'plan')) html += renderUsed();
-    if (S.tab === 'today') html += renderToday(m);else if (S.tab === 'plan') html += renderPlan(m);else if (S.tab === 'frigo') html += renderFrigo();else if (S.tab === 'courses') html += renderCourses(list);else if (S.tab === 'recettes') html += S.recipeId && S.recipes[S.recipeId] ? renderRecipe(S.recipeId) : renderRecipes();else html += renderHist();
+    if (S.tab === 'today') html += renderToday(m);else if (S.tab === 'plan') html += renderPlan(m);else if (S.tab === 'frigo') html += renderFrigo();else if (S.tab === 'courses') html += renderCourses(list);else if (S.tab === 'recettes') html += S.recipeId && S.recipes[S.recipeId] ? renderRecipe(S.recipeId) : renderRecipes();else html += renderRecipes();
     html += '</main></div>';
     app.innerHTML = html;
     {
@@ -1298,22 +1298,43 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
       html += '<div class="swapbar" role="status"><span>Où veux-tu mettre <b>' + esc(sx.off ? offShort(sx.off) : sx.name) + '</b> ? Touche le repas avec lequel l\'échanger.</span><button class="btn" data-act="swapcancel">Annuler</button></div>';
     } else if (!S.readOnly) html += '<p class="hint">Touche le nom d\'un plat pour ouvrir sa recette. Le cœur = fait, la croix = pas envie (Claude réutilisera ses ingrédients). Le bouton « … » sert à échanger deux repas de place ou à changer un plat.</p>';
     m.weeks.forEach(function (w, wi) {
-      if (!w.days.some(function (d) {
+      if (!S.showPast && !w.days.some(function (d) {
         return d.date >= TODAY;
       })) return;
-      var first = w.days.find(function (d) {
+      var first = S.showPast ? w.days[0] : w.days.find(function (d) {
           return d.date >= TODAY;
         }),
         last = w.days[w.days.length - 1];
       html += '<section class="week"><div class="week-head"><h2 class="serif">' + esc(w.label) + '</h2><span class="range">' + fmt(first.date) + ' – ' + fmt(last.date) + '</span></div>';
       w.days.forEach(function (d, di) {
-        if (d.date < TODAY) return;
+        if (!S.showPast && d.date < TODAY) return;
         var we = /samedi|dimanche/i.test(d.day);
         var today = d.date === TODAY;
         html += '<div class="day' + (we ? ' we' : '') + (today ? ' today' : '') + '"><div class="dhead"><div class="dname">' + esc(d.day) + '</div><div class="ddate">' + fmt(d.date) + '</div>' + (today ? '<span class="pill">Aujourd\'hui</span>' : '') + '</div><div class="meals">' + meal(wi, di, 'midi', 'Midi', d.midi) + meal(wi, di, 'soir', 'Soir', d.soir) + '</div></div>';
       });
       html += '</section>';
     });
+    if (!S.swap) {
+      html += '<p class="pastlink"><button class="inline-link" data-act="past">' + (S.showPast ? 'Masquer les jours passés' : 'Voir les jours et les mois passés') + '</button></p>';
+      if (S.showPast) {
+        var lab = function lab(x) {
+          return !x ? '—' : x.off ? offShort(x.off).toLowerCase() : x.name;
+        };
+        monthsSorted().reverse().filter(function (o) {
+          return o.id !== S.monthId;
+        }).forEach(function (o) {
+          html += '<details class="month"><summary>' + esc(o.label) + ' <small>· du ' + fmt(o.start) + ' au ' + fmt(o.end) + '</small></summary>';
+          o.weeks.forEach(function (w) {
+            html += '<div class="eyebrow" style="margin-top:10px">' + esc(w.label) + '</div><ol>';
+            w.days.forEach(function (d) {
+              html += '<li>' + esc(d.day) + ' ' + fmt(d.date) + ' : ' + esc(lab(d.midi)) + ' / ' + esc(lab(d.soir)) + '</li>';
+            });
+            html += '</ol>';
+          });
+          html += '</details>';
+        });
+      }
+    }
     return html;
   }
   function meal(wi, di, slot, label, x) {
@@ -1362,7 +1383,14 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
         return i.done;
       }).length;
     }, 0);
-    html += '<div class="progress"><div class="row"><span><strong>' + done + ' / ' + total + '</strong> articles pris · ' + esc(list.label) + (list.people ? ' · pour ' + list.people + ' personnes' : '') + '</span>' + (S.readOnly || !done ? '' : '<button class="btn" data-act="askreset">Tout décocher</button>') + '</div><div class="bar"><span style="width:' + (total ? Math.round(done / total * 100) : 0) + '%"></span></div></div>';
+    html += '<div class="progress"><div class="row"><span><strong>' + done + ' / ' + total + '</strong> articles pris · ' + esc(list.label) + (list.people ? ' · pour ' + list.people + ' personnes' : '') + '</span>' + (S.readOnly || !done ? '' : '<button class="btn" data-act="askreset">Tout décocher</button>') + '</div><div class="bar"><span style="width:' + (total ? Math.round(done / total * 100) : 0) + '%"></span></div>' + function () {
+      var n = list.sections.reduce(function (a, s) {
+        return a + s.items.filter(function (i) {
+          return i.done && !i.stored;
+        }).length;
+      }, 0);
+      return n && !S.readOnly ? '<div class="storebar"><span><b>' + n + ' article' + (n > 1 ? 's' : '') + ' pris</b>, pas encore dans le frigo.</span><button class="btn primary sm" data-act="storeall">Ranger dans le frigo</button></div>' : '';
+    }() + '</div>';
     html += '<p class="hint small">Ce que tu as déjà à la maison se gère dans l\'onglet <button class="inline-link" data-act="tab" data-id="frigo">Frigo</button>. La flèche à côté d\'un rayon le fait monter : range-les dans l\'ordre de ton magasin. Pour faire les courses à deux, partage le lien du carnet : la personne connectée à Claude coche aussi, et tu vois ce qui est déjà pris.</p>';
     if (S.confirmReset) html += '<div class="confirm" role="alert"><span>Décocher les ' + done + ' articles pris ?</span><button class="btn danger" data-act="reset">Décocher</button><button class="btn" data-act="cancelreset">Annuler</button></div>';
     aisleOrder(list.sections).forEach(function (si, pos) {
@@ -1505,7 +1533,26 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
   function norm(s) {
     return String(s || '').toLowerCase().replace(/\u0153/g, 'oe').normalize('NFD').replace(/[̀-ͯ]/g, '');
   }
+  function verdicts() {
+    var v = {};
+    monthsSorted().forEach(function (m) {
+      return m.weeks.forEach(function (w) {
+        return w.days.forEach(function (d) {
+          return ['midi', 'soir'].forEach(function (sl) {
+            var x = d[sl];
+            if (!x || !x.recipeId || !x.rating) return;
+            if (x.rating === 1) v[x.recipeId] = 1;else if (v[x.recipeId] !== 1) v[x.recipeId] = -1;
+          });
+        });
+      });
+    });
+    return v;
+  }
   function recipeMatches(r) {
+    if (S.fav) {
+      var v = S._verdicts || {};
+      if (S.fav === 'good' ? v[r.id] !== 1 : v[r.id] !== -1) return false;
+    }
     if (S.cuisine && r.cuisine !== S.cuisine) return false;
     if (S.dev && !(r.devices && r.devices.variants && r.devices.variants[S.dev])) return false;
     if (!S.q) return true;
@@ -1515,6 +1562,7 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
     });
   }
   function recipeCards() {
+    S._verdicts = verdicts();
     var all = Object.entries(S.recipes).map(function (_ref5) {
       var _ref6 = _slicedToArray(_ref5, 2),
         id = _ref6[0],
@@ -1553,9 +1601,9 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
     html += '<div class="chips-row" role="group" aria-label="Cuisine"><button class="mchip" data-act="cuisine" data-id="" aria-pressed="' + !S.cuisine + '">Toutes · ' + n + '</button>' + cuisines.map(function (c) {
       return '<button class="mchip" data-act="cuisine" data-id="' + esc(c) + '" aria-pressed="' + (S.cuisine === c) + '">' + esc(c) + '</button>';
     }).join('') + '</div>';
-    html += '<div class="chips-row dev-row" role="group" aria-label="Appareil"><span class="eyebrow">Faisable au</span>' + ['thermomix', 'airfryer'].map(function (d) {
+    html += '<div class="chips-row dev-row" role="group" aria-label="Filtres"><span class="eyebrow">Faisable au</span>' + ['thermomix', 'airfryer'].map(function (d) {
       return '<button class="mchip" data-act="dev" data-id="' + d + '" aria-pressed="' + (S.dev === d) + '">' + ICON_DEV[d] + DEV[d] + '</button>';
-    }).join('') + '</div>';
+    }).join('') + '<span class="eyebrow" style="margin-left:8px">Déjà fait</span><button class="mchip" data-act="fav" data-id="good" aria-pressed="' + (S.fav === 'good') + '">' + ICON_UP + 'Aimés</button><button class="mchip" data-act="fav" data-id="bad" aria-pressed="' + (S.fav === 'bad') + '">' + ICON_DOWN + 'Écartés</button></div>';
     html += '<div id="rlist" class="rlist">' + recipeCards() + '</div>';
     return html;
   }
@@ -1854,10 +1902,11 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
     var html = '';
     if (!S.readOnly) {
       var since = lb ? daysSince(lb.date) : null;
-      html += '<div class="bilanbar"><div><b>Bilan des 2 semaines</b><span>' + (lb ? 'Dernier bilan le ' + fmt(lb.date) + (since >= 13 ? ' · c\'est le moment d\'en refaire un' : '') : 'Fais le point sur ce qu\'il te reste, puis on prépare la suite ensemble avec Claude.') + '</span></div><button class="btn primary" data-act="bilanstart">Faire le point</button></div>';
+      var due = !lb || since >= 13;
+      html += '<div class="bilanline' + (due ? ' due' : '') + '"><span>' + (lb ? 'Dernier bilan le ' + fmt(lb.date) + (due ? ' · c\'est le moment d\'en refaire un' : '') : 'Toutes les 2 semaines, fais le point sur ce qu\'il te reste.') + '</span><span class="toolrow" style="margin:0"><button class="btn' + (due ? ' primary' : '') + ' sm" data-act="bilanstart">Faire le point</button>' + (S.sampleOk ? '<button class="btn sm" data-act="ideasopen" aria-expanded="' + !!S.ideasOpen + '">Idées anti-gaspi</button>' : '') + '</span></div>';
     }
     if (S.lastSaved) html += '<div class="note hsec"><b>Bilan enregistré.</b> Écris « bilan prêt » à Claude dans votre conversation : il le lit, te propose des plats pour finir ce qui reste, et met à jour le planning et les courses avec toi.</div>';
-    html += renderIdeas();
+    if (S.ideasOpen) html += renderIdeas();
     html += '<p class="hint">Touche la croix quand un produit est fini, ajoute ce que tu achètes. Un badge rouge signale un produit frais rangé depuis 5 jours ou plus.</p><div class="frigo">';
     STOCK_SECTIONS.forEach(function (_ref9) {
       var _ref0 = _slicedToArray(_ref9, 3),
@@ -1872,15 +1921,6 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
       html += '</section>';
     });
     html += '</div>';
-    var l = pickList();
-    if (l && !S.readOnly) {
-      var n = l.sections.reduce(function (a, s) {
-        return a + s.items.filter(function (i) {
-          return i.done && !i.stored;
-        }).length;
-      }, 0);
-      if (n) html += '<div class="note store"><span><b>' + n + ' article' + (n > 1 ? 's' : '') + '</b> coché' + (n > 1 ? 's' : '') + ' dans ta liste de courses ne ' + (n > 1 ? 'sont' : 'est') + ' pas encore rangé' + (n > 1 ? 's' : '') + ' ici.</span><button class="btn primary" data-act="storeall">Ranger mes courses</button></div>';
-    }
     return html;
   }
   function renderBilan() {
@@ -2457,6 +2497,21 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
       render();
       return;
     }
+    if (act === 'fav') {
+      S.fav = S.fav === b.dataset.id ? '' : b.dataset.id;
+      render();
+      return;
+    }
+    if (act === 'past') {
+      S.showPast = !S.showPast;
+      render();
+      return;
+    }
+    if (act === 'ideasopen') {
+      S.ideasOpen = !S.ideasOpen;
+      render();
+      return;
+    }
     if (act === 'dev') {
       S.dev = S.dev === b.dataset.id ? '' : b.dataset.id;
       render();
@@ -2801,7 +2856,7 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
       sections.forEach(function (s) {
         return s.items.forEach(function (i) {
           if (i.done && !i.stored) {
-            var name = i.text.replace(/\s*·.*$/, '').replace(/\s*\(.*?\)\s*/g, ' ').trim();
+            var name = i.text.replace(/\s*[·—].*$/, '').replace(/\s*\(.*?\)\s*/g, ' ').trim();
             var _k3 = guessSection(name);
             S.stock[_k3] = (S.stock[_k3] || []).concat(name);
             _touched.add(_k3);
@@ -2815,7 +2870,7 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
         sections.forEach(function (s) {
           return s.items.forEach(function (i) {
             if (i.stored && i.done) {
-              var nm = i.text.replace(/\s*·.*$/, '').replace(/\s*\(.*?\)\s*/g, ' ').trim();
+              var nm = i.text.replace(/\s*[·—].*$/, '').replace(/\s*\(.*?\)\s*/g, ' ').trim();
               var _key = nkey(nm);
               if (!_meta[_key]) _meta[_key] = {
                 added: TODAY
@@ -2834,7 +2889,7 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
         sections: sections
       });
       render();
-      toast(_n + ' article' + (_n > 1 ? 's' : '') + ' rangé' + (_n > 1 ? 's' : ''));
+      toast(_n + ' article' + (_n > 1 ? 's' : '') + ' rangé' + (_n > 1 ? 's' : '') + ' dans le frigo');
       return;
     }
     if (act === 'askreset') {

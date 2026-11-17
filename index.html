@@ -220,6 +220,13 @@ section.week{margin-bottom:28px}
 .aisle{border:1px solid var(--line);background:var(--surface);border-radius:999px;width:28px;height:28px;padding:0;display:inline-grid;place-items:center;color:var(--muted);margin-left:8px;vertical-align:4px}
 .aisle svg{width:12px;height:12px}
 .shop-h{display:flex;align-items:center}
+.pastlink{margin:4px 0 0;font-size:14px}
+.storebar{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;background:var(--mint-soft);border-radius:12px;padding:10px 12px;font-size:14px}
+.storebar b{color:var(--mint)}
+.bilanline{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:14px;font-size:14px;color:var(--muted)}
+.bilanline.due{background:var(--blue-soft);border-radius:14px;padding:12px 14px;color:var(--ink)}
+.toolrow{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.toolrow .btn{display:inline-flex;align-items:center;gap:6px}
 .fsec{min-width:0;overflow:hidden}
 .fsec .add input{min-width:0;width:100%}
 .fsec .add .btn{flex:none}
@@ -419,7 +426,7 @@ button.bm-name.link:hover{text-decoration-color:var(--saffron)}
 html{font-size:17px}
 .kreload{position:fixed;right:12px;bottom:12px;z-index:40;border:0;border-radius:999px;background:var(--blue);color:#fff;font-weight:700;font-size:15px;padding:10px 16px;box-shadow:0 4px 14px rgba(10,16,60,.25)}
 body{font-size:17px}
-.bilanbar,.ideas,.store,.hint,.add,.aisle{display:none!important}
+.bilanbar,.bilanline,.ideas,.store,.hint,.add,.aisle,.pastlink,.tab[data-id="courses"],.tab[data-id="frigo"]{display:none!important}
 .bm-name{font-size:28px}
 .ck-step{font-size:30px}
 @supports not (display:grid){
