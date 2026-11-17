@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Cuisine">
 <link rel="apple-touch-icon" href="icon.png">
 <title>Carnet · cuisine</title>
@@ -417,6 +417,7 @@ button.bm-name.link:hover{text-decoration-color:var(--saffron)}
 
 /* Écran de cuisine : plus grand, sans ce qui sert à modifier */
 html{font-size:17px}
+.kreload{position:fixed;right:12px;bottom:12px;z-index:40;border:0;border-radius:999px;background:var(--blue);color:#fff;font-weight:700;font-size:15px;padding:10px 16px;box-shadow:0 4px 14px rgba(10,16,60,.25)}
 body{font-size:17px}
 .bilanbar,.ideas,.store,.hint,.add,.aisle{display:none!important}
 .bm-name{font-size:28px}
@@ -431,6 +432,7 @@ body{font-size:17px}
 </style>
 </head>
 <body>
+<button class="kreload" onclick="location.reload()" aria-label="Actualiser">&#8635; Actualiser</button>
 <div id="app"></div>
 <div class="toast" id="toast" hidden></div>
 <script src="cuisine.js"></script>
