@@ -1243,6 +1243,7 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
     return '<div class="today-card"><span class="hand">' + esc(title) + '</span><div class="tc-row"><span class="slot midi">Midi</span><span>' + esc(lab(found.midi)) + '</span></div><div class="tc-row"><span class="slot soir">Soir</span><span>' + esc(lab(found.soir)) + '</span></div></div>';
   }
   function render() {
+    document.body.className = S.cook ? 'cooking' : '';
     if (S.cook && S.recipes[S.cook.id]) {
       app.innerHTML = renderCook();
       return;
@@ -2283,6 +2284,28 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
     if (!m) return 0;
     return +(m[2] || m[1]);
   }
+  var UNITW = new Set(['gousse', 'gousses', 'haut', 'hauts', 'cuisse', 'cuisses', 'blanc', 'blancs', 'filet', 'filets', 'boite', 'boites', 'brin', 'brins', 'pincee', 'cuillere', 'tranche', 'tranches', 'morceau', 'morceaux', 'botte', 'bouquet', 'feuille', 'feuilles', 'pave', 'paves', 'sachet', 'pot', 'verre', 'poignee', 'jus', 'zeste', 'petit', 'petite', 'gros', 'grosse', 'demi', 'reste']);
+  var sing = function sing(w) {
+    return w.replace(/(x|s)$/, '');
+  };
+  function stepIngr(r, s) {
+    var raw = ' ' + nkey(s) + ' ';
+    return (r.ingredients || []).map(function (x, j) {
+      var words = nkey(x.item).split(' ').filter(function (v) {
+        return v.length >= 3 && !/^\d/.test(v) && ['les', 'des', 'une', 'pour', 'avec', 'sans', 'facultatif', 'ou'].indexOf(v) < 0;
+      });
+      var head = words.find(function (v) {
+        return !UNITW.has(v);
+      });
+      if (!head) return -1;
+      var isOil = head === 'huile';
+      var text = isOil ? raw : raw.replace(/ huile d olive /g, ' huile ');
+      var ws = text.split(' ').map(sing);
+      return ws.indexOf(sing(head)) >= 0 ? j : -1;
+    }).filter(function (j) {
+      return j >= 0;
+    });
+  }
   function renderCook() {
     var _cookSteps = cookSteps(S.cook.id),
       r = _cookSteps.r,
@@ -2291,19 +2314,37 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
     var i = Math.min(S.cook.i, steps.length - 1);
     var s = steps[i] || '';
     var mins = stepMinutes(s);
-    var html = '<div class="cook"><header class="ck-top"><button class="btn" data-act="cookclose">' + ICON_X + 'Fermer</button><div class="ck-title"><span class="eyebrow">' + (meth === 'classique' ? 'Mode cuisine' : DEV[meth]) + '</span><b>' + esc(r.title) + '</b></div></header>';
-    html += '<div class="ck-progress" aria-hidden="true">' + steps.map(function (_, k) {
-      return '<span class="' + (k < i ? 'past' : k === i ? 'cur' : '') + '"></span>';
+    var used = stepIngr(r, s);
+    var got = S.cook.got || {};
+    var html = '<div class="cook2">';
+    html += '<header class="ck2-top"><button class="ck2-close" data-act="cookclose" aria-label="Fermer le mode cuisine">' + ICON_X + '</button><div class="ck2-title"><span class="eyebrow">' + (meth === 'classique' ? 'Mode cuisine' : 'Mode cuisine · ' + DEV[meth]) + '</span><b>' + esc(r.title) + '</b></div><span class="ck2-count">' + (i + 1) + '<small> / ' + steps.length + '</small></span></header>';
+    html += '<div class="ck2-prog">' + steps.map(function (_, k) {
+      return '<button class="' + (k < i ? 'past' : k === i ? 'cur' : '') + '" data-act="cookgo" data-i="' + k + '" aria-label="Étape ' + (k + 1) + '"></button>';
     }).join('') + '</div>';
-    html += '<p class="ck-count">Étape ' + (i + 1) + ' sur ' + steps.length + '</p><p class="ck-step">' + esc(s) + '</p>';
-    if (mins) html += '<button class="btn timerbtn" data-act="timer" data-min="' + mins + '" data-label="Étape ' + (i + 1) + '">' + ICON_PLAY + 'Lancer un minuteur de ' + mins + ' min</button>';
-    if (S.timers.length) html += '<div class="ck-timers">' + S.timers.map(function (t) {
+    html += '<div class="ck2-body"><aside class="ck2-ing"><h3>Ingrédients <small>pour ' + (r.servings || 2) + '</small></h3>';
+    var grp = null;
+    (r.ingredients || []).forEach(function (x, j) {
+      if (x.group && x.group !== grp) {
+        grp = x.group;
+        html += '<div class="ck2-grp">' + esc(grp) + '</div>';
+      }
+      var on = used.indexOf(j) >= 0,
+        ok = !!got[j];
+      html += '<button class="ck2-it' + (on ? ' now' : '') + (ok ? ' ok' : '') + '" data-act="cookgot" data-j="' + j + '" aria-pressed="' + ok + '"><span class="ck2-box"></span><span class="ck2-q">' + esc(x.qty || '') + '</span><span class="ck2-n">' + esc(x.item) + '</span></button>';
+    });
+    html += '<p class="ck2-tip">En jaune : ce qui sert à cette étape. Touche un ingrédient pour le cocher.</p></aside>';
+    html += '<main class="ck2-main"><div class="ck2-card"><span class="ck2-lab">Étape ' + (i + 1) + '</span><p class="ck2-step">' + esc(s) + '</p>';
+    if (used.length) html += '<div class="ck2-chips">' + used.map(function (j) {
+      return '<span>' + esc(((r.ingredients[j].qty || '') + ' ' + r.ingredients[j].item).trim()) + '</span>';
+    }).join('') + '</div>';
+    if (mins) html += '<button class="btn ck2-timer" data-act="timer" data-min="' + mins + '" data-label="Étape ' + (i + 1) + '">' + ICON_PLAY + 'Minuteur ' + mins + ' min</button>';
+    html += '</div>';
+    if (S.timers.length) html += '<div class="ck2-timers">' + S.timers.map(function (t) {
       return '<div class="tmr' + (t.done ? ' done' : '') + '" data-tid="' + t.id + '"><span>' + esc(t.label) + '</span><b class="tmr-v">' + fmtLeft(t) + '</b><button class="fdel" data-act="timerdel" data-id="' + t.id + '" aria-label="Arrêter">' + ICON_X + '</button></div>';
     }).join('') + '</div>';
-    html += '<details class="ck-ing"><summary>Ingrédients</summary><ul>' + (r.ingredients || []).map(function (x) {
-      return '<li><b>' + esc(x.qty || '') + '</b> ' + esc(x.item) + '</li>';
-    }).join('') + '</ul></details>';
-    html += '<nav class="ck-nav"><button class="btn big" data-act="cookprev"' + (i === 0 ? ' disabled' : '') + '>Précédent</button>' + (i < steps.length - 1 ? '<button class="btn primary big" data-act="cooknext">Suivant</button>' : '<button class="btn primary big" data-act="cookdone">Terminé</button>') + '</nav></div>';
+    if (i < steps.length - 1) html += '<p class="ck2-next"><b>Ensuite</b> ' + esc(steps[i + 1]) + '</p>';
+    html += '</main></div>';
+    html += '<nav class="ck2-nav"><button class="btn ck2-prev" data-act="cookprev"' + (i === 0 ? ' disabled' : '') + '>' + ICON_BACK + 'Précédent</button>' + (i < steps.length - 1 ? '<button class="btn primary ck2-go" data-act="cooknext">Étape suivante</button>' : '<button class="btn primary ck2-go" data-act="cookdone">C\'est prêt !</button>') + '</nav></div>';
     return html;
   }
   function fmtLeft(t) {
@@ -2586,6 +2627,20 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
       window.scrollTo({
         top: 0
       });
+      return;
+    }
+    if (act === 'cookgo') {
+      S.cook.i = +b.dataset.i;
+      render();
+      window.scrollTo(0, 0);
+      return;
+    }
+    if (act === 'cookgot') {
+      S.cook.got = S.cook.got || {};
+      var j = b.dataset.j;
+      S.cook.got[j] = !S.cook.got[j];
+      b.classList.toggle('ok', S.cook.got[j]);
+      b.setAttribute('aria-pressed', String(S.cook.got[j]));
       return;
     }
     if (act === 'cookprev') {

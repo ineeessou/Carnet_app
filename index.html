@@ -231,6 +231,55 @@ section.week{margin-bottom:28px}
 .fsec .add input{min-width:0;width:100%}
 .fsec .add .btn{flex:none}
 @media (max-width:420px){.bl-row{grid-template-columns:1fr}}
+/* mode cuisine */
+.cook2{min-height:100vh;display:flex;flex-direction:column;background:var(--bg);padding:12px 16px 0;max-width:1100px;margin:0 auto}
+.ck2-top{display:flex;align-items:center}
+.ck2-close{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);display:inline-flex;align-items:center;justify-content:center;flex:none;margin-right:12px;padding:0}
+.ck2-close svg{width:16px;height:16px}
+.ck2-title{flex:1;min-width:0;display:flex;flex-direction:column}
+.ck2-title b{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:19px;line-height:1.2}
+.ck2-count{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:30px;color:var(--blue);margin-left:12px;white-space:nowrap}
+.ck2-count small{font-size:17px;color:var(--muted)}
+.ck2-prog{display:flex;margin:12px 0 14px}
+.ck2-prog button{flex:1;height:8px;border:0;border-radius:4px;background:var(--line);margin-right:4px;padding:0}
+.ck2-prog button:last-child{margin-right:0}
+.ck2-prog .past{background:var(--mint)}.ck2-prog .cur{background:var(--saffron)}
+.ck2-body{display:flex;align-items:flex-start;flex:1}
+.ck2-ing{width:34%;max-width:360px;flex:none;margin-right:18px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px 12px;position:-webkit-sticky;position:sticky;top:12px;max-height:560px;max-height:calc(100vh - 190px);overflow:auto;-webkit-overflow-scrolling:touch}
+.ck2-ing h3{font-size:18px;margin:0 4px 8px;color:var(--blue)}
+.ck2-ing h3 small{font-family:"Figtree",system-ui,sans-serif;font-size:13px;color:var(--muted);font-weight:600}
+.ck2-grp{font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:10px 4px 4px}
+.ck2-it{display:flex;align-items:flex-start;width:100%;text-align:left;border:0;background:none;border-radius:10px;padding:7px 6px;font-size:15px;line-height:1.35}
+.ck2-it.now{background:var(--saffron-soft)}
+.ck2-box{width:18px;height:18px;border:2px solid var(--line);border-radius:5px;flex:none;margin:1px 8px 0 0;background:var(--surface)}
+.ck2-it.ok .ck2-box{background:var(--mint);border-color:var(--mint)}
+.ck2-it.ok .ck2-n,.ck2-it.ok .ck2-q{color:var(--muted);text-decoration:line-through}
+.ck2-q{font-weight:800;min-width:74px;margin-right:6px;font-variant-numeric:tabular-nums}
+.ck2-n{flex:1;min-width:0}
+.ck2-tip{font-size:12px;color:var(--muted);margin:10px 4px 0}
+.ck2-main{flex:1;min-width:0;padding-bottom:110px}
+.ck2-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px 24px}
+.ck2-lab{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--saffron-ink);background:var(--saffron-soft);border-radius:999px;padding:3px 10px}
+.ck2-step{font-size:28px;font-size:clamp(22px,3.2vw,32px);line-height:1.38;margin:12px 0 14px;font-weight:500}
+.ck2-chips{display:flex;flex-wrap:wrap;margin:0 0 10px}
+.ck2-chips span{font-size:13.5px;font-weight:700;background:var(--saffron-soft);color:var(--saffron-ink);border-radius:999px;padding:4px 10px;margin:0 6px 6px 0}
+.ck2-timer{display:inline-flex;align-items:center;background:var(--blue-soft);border-color:transparent;color:var(--blue);padding:11px 18px;font-size:16px}
+.ck2-timer svg{width:15px;height:15px;margin-right:8px}
+.ck2-timers{margin-top:12px}
+.ck2-timers .tmr{margin-bottom:6px}
+.ck2-next{margin:16px 4px 0;font-size:15px;color:var(--muted);line-height:1.45}
+.ck2-next b{display:block;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.ck2-nav{position:fixed;left:0;right:0;bottom:0;display:flex;padding:12px 16px;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:#F7F7FB;background:var(--bg);border-top:1px solid var(--line);z-index:30}
+.ck2-prev{display:inline-flex;align-items:center;justify-content:center;flex:1;max-width:200px;margin-right:10px;padding:16px;font-size:16px;border-radius:16px}
+.ck2-prev svg{width:15px;height:15px;margin-right:6px}
+.ck2-go{flex:3;padding:16px;font-size:18px;border-radius:16px}
+body.cooking .kreload{display:none!important}
+@media (max-width:700px){
+  .ck2-body{flex-direction:column;align-items:stretch}
+  .ck2-main{order:1;padding-bottom:16px}
+  .ck2-ing{order:2;width:auto;max-width:none;margin:0 0 110px;position:static;max-height:none}
+  .ck2-card{padding:18px}
+}
 /* historique */
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:22px}
 .stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
